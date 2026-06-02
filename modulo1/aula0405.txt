@@ -1,0 +1,13 @@
+basic javascript
+
+js - fracamente tipada
+3 tipos de dados - string, number e boolean
+const - valor constante de uma variavel
+    - em js podemos mudar variaveis const
+NaN - Not a Number
+Math tem varias funcoes
+    pow, ceil, abs, sqrt
+Date
+if, else if else
+operador ternario
+    condicao ? o que fazer caso true : o que fazer caso false

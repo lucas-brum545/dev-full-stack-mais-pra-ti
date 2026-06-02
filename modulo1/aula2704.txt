@@ -1,0 +1,21 @@
+curso dev full stack
+prof jacques
+turma 1
+
+- seg qua qui: 19h - 21h30, um prof por turma
+- sab: 9 - 12h turmas 1 e 2 unificadas
+
+- intervalo 15 20 min
+- sempre preencher formulario de presença
+- entrega de exercicios no classroom
+- lovable - ia para construir landing pages
+- cronograma previsto
+- discord
+- livro algoritmos, javascript
+- youtube - prof guanabara, fernanda kipper, loiane
+- slides disponiveis no github/classroom
+
+'professor, eu sou formado em ciencia da computação pela ufrgs, tenho tecnico em informatica pelo senac, trabalhei apenas dentro da universidade através de bolsas com suporte ao usuario, resolvendo problemas de hardware e software,
+mas tbm adoro programar e sou apaixonado por analise de dados tambem, me inscrevi para o curso dev full stack para me atualizar, continuar aprendendo coisas novas e tambem
+me inserir no mercado de trabalho fazendo algo que gosto. qual ou quais dicas tu tem pra me dar se estou no caminho certo, etc
+obrigado!'

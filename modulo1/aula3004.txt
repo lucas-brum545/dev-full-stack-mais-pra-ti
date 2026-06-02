@@ -1,0 +1,23 @@
+NOTEBOOKLM
+	google
+	ferramenta IA que aprende com coisas pontuais e em fontes definidas pelo próprio usuário
+	
+AWS
+LINGUAGEM DE PROGRAMAÇÃO E INTROD A LOGICA DE PROGRAMAÇÃO
+-ling compilada x interpretada
+-variaveis
+	nome - unico
+	tipo associado
+	conteudo - um dado do tipo associado
+	endereço
+-tipos de dados em JS
+	string
+	number
+	boolean
+	undefined/null
+-tabelas verdade
+-estruturas de controle condicionais
+-instalando vscode e node js
+
+
+	

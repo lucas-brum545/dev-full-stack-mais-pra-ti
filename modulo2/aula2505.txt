@@ -1,0 +1,10 @@
+MODULO 2
+
+VERSIONAMENTO DE CÓDIGO
+
+trilhas obrigatórias dev full stack
+    - design para quem nao e designer
+    - versionamento de codigo com git
+    desenvolvimento - trilhas
+        criar conta pucrs (24h pra efetuar e validar cadastro)
+        

@@ -1,0 +1,42 @@
+FUNCIONAMENTO DOS COMPUTADORES E INTRODUÇÃO À IA
+
+historia da computação / IA
+
+- computador -> fazer calculos, baseado na numeracao decimal pq temos dez dedos
+- ábaco
+- ibere
+- maquina diferencial e analitica -> charles babbage
+	ada lovalace, parceira de charles
+- linha do tempo
+	enigma
+		rele -> bobina condutor que recebe energia fechando ou nao
+- john von neumann
+	consultor do projeto eniac
+	criou conceito de programa armazenado
+	criou conceito de operacoes com numero binario
+	desenvolveu a logica dos circuitos
+	maquina de von neumann
+	arquitetura de von neumann
+- transistor
+	semelhante aos reles e valvulas, porem muito menores e mais resistentes
+	semicondutor - silicio
+		material que gera eletrons livres
+
+- 1943: primeiro neuronio artificial
+- 70 - 80 inverno da IA: algebra linear, xor e linearidade
+- 86 - backpropagation
+
+- tabela de unidades
+- representação de letras e simbolos
+	tabela ASCII
+	unicode - emojis
+- cores
+	fps - frames per second
+- 2012
+	era moderna da IA
+	linha do tempo da IA
+- visao computacional
+
+onde baixar os livros que o prof falou:
+https://github.com/EbookFoundation/free-programming-books
+https://z-lib.fm/

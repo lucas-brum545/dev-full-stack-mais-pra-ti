@@ -83,22 +83,69 @@ const prompt = require('prompt-sync')()
 // listar o inventário completo. Permita que o usuário informe um item para usar:
 // reduza a quantidade em 1 ou exiba "item esgotado" se for zero.
 
-let inventario = {
-    espada: 1,
-    pocao: 5,
-    escudo: 2,
-    arco: 0
+// let inventario = {
+//     espada: 1,
+//     pocao: 5,
+//     escudo: 2,
+//     arco: 0
+// }
+
+// for (const chave in inventario) {
+//     console.log(chave + ': ' + inventario[chave])
+// }
+
+// let itemUsuario = prompt('Informe um item para usar: ')
+// if (inventario[itemUsuario] > 0) {
+//     inventario[itemUsuario] -= 1
+//     console.log('Você usou um ' + itemUsuario + '. Quantidade restante: ' + inventario[itemUsuario])
+// }
+// else {
+//     console.log('Item esgotado: ' + itemUsuario)
+// }
+
+// 5. Crie um objeto representando o orçamento mensal de uma pessoa, com
+// categorias como alimentação, transporte, lazer e saúde, cada uma com valor
+// planejado e valor gasto. Use for...in para percorrer as categorias e exibir se cada
+// uma ficou dentro ou acima do orçamento, e calcule o saldo geral do mês.
+
+let orcamento = {
+    alimentacao: { planejado: 1000, gasto: 1200 },
+    transporte: { planejado: 500, gasto: 450 },
+    lazer: { planejado: 300, gasto: 350 },
+    saude: { planejado: 200, gasto: 150 }
 }
 
-for (const chave in inventario) {
-    console.log(chave + ': ' + inventario[chave])
+for (const categoria in orcamento) {
+    let planejado = orcamento[categoria].planejado
+    let gasto = orcamento[categoria].gasto
+
+    if (gasto <= planejado) {
+        console.log(categoria + ': Dentro do orçamento. Planejado: R$' + planejado + ', Gasto: R$' + gasto)
+    }
+    else {
+        console.log(categoria + ': Acima do orçamento! Planejado: R$' + planejado + ', Gasto: R$' + gasto)
+    }
 }
 
-let itemUsuario = prompt('Informe um item para usar: ')
-if (inventario[itemUsuario] > 0) {
-    inventario[itemUsuario] -= 1
-    console.log('Você usou um ' + itemUsuario + '. Quantidade restante: ' + inventario[itemUsuario])
+let saldoGeral = 0
+for (const categoria in orcamento) {
+    saldoGeral += (orcamento[categoria].planejado - orcamento[categoria].gasto)
 }
-else {
-    console.log('Item esgotado: ' + itemUsuario)
+console.log('Saldo geral do mês: R$' + saldoGeral)
+
+// 6. Crie um array de objetos representando músicas, cada uma com título, artista e
+// duração em segundos. Use for...of para exibir cada música no formato "Artista —
+// Título (mm:ss)". Ao final, use forEach para somar a duração total e exiba-a no
+// mesmo formato.
+
+let musicas = [
+    { titulo: "I Love New York", artista: "Madonna", duracao: 251},
+    { titulo: "Maneater", artista: "Nelly Furtado", duracao: 258},
+    { titulo: "É de Chocolate", artista: "Xuxa", duracao: 299}
+];
+
+for (const musica of musicas) {
+    let mm =
+    let ss =
+    console.log(musica.titulo + " - " + musica.titulo + )
 }

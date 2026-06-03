@@ -108,44 +108,93 @@ const prompt = require('prompt-sync')()
 // planejado e valor gasto. Use for...in para percorrer as categorias e exibir se cada
 // uma ficou dentro ou acima do orçamento, e calcule o saldo geral do mês.
 
-let orcamento = {
-    alimentacao: { planejado: 1000, gasto: 1200 },
-    transporte: { planejado: 500, gasto: 450 },
-    lazer: { planejado: 300, gasto: 350 },
-    saude: { planejado: 200, gasto: 150 }
-}
+// let orcamento = {
+//     alimentacao: { planejado: 1000, gasto: 1200 },
+//     transporte: { planejado: 500, gasto: 450 },
+//     lazer: { planejado: 300, gasto: 350 },
+//     saude: { planejado: 200, gasto: 150 }
+// }
 
-for (const categoria in orcamento) {
-    let planejado = orcamento[categoria].planejado
-    let gasto = orcamento[categoria].gasto
+// for (const categoria in orcamento) {
+//     let planejado = orcamento[categoria].planejado
+//     let gasto = orcamento[categoria].gasto
 
-    if (gasto <= planejado) {
-        console.log(categoria + ': Dentro do orçamento. Planejado: R$' + planejado + ', Gasto: R$' + gasto)
-    }
-    else {
-        console.log(categoria + ': Acima do orçamento! Planejado: R$' + planejado + ', Gasto: R$' + gasto)
-    }
-}
+//     if (gasto <= planejado) {
+//         console.log(categoria + ': Dentro do orçamento. Planejado: R$' + planejado + ', Gasto: R$' + gasto)
+//     }
+//     else {
+//         console.log(categoria + ': Acima do orçamento! Planejado: R$' + planejado + ', Gasto: R$' + gasto)
+//     }
+// }
 
-let saldoGeral = 0
-for (const categoria in orcamento) {
-    saldoGeral += (orcamento[categoria].planejado - orcamento[categoria].gasto)
-}
-console.log('Saldo geral do mês: R$' + saldoGeral)
+// let saldoGeral = 0
+// for (const categoria in orcamento) {
+//     saldoGeral += (orcamento[categoria].planejado - orcamento[categoria].gasto)
+// }
+// console.log('Saldo geral do mês: R$' + saldoGeral)
 
 // 6. Crie um array de objetos representando músicas, cada uma com título, artista e
 // duração em segundos. Use for...of para exibir cada música no formato "Artista —
 // Título (mm:ss)". Ao final, use forEach para somar a duração total e exiba-a no
 // mesmo formato.
 
-let musicas = [
-    { titulo: "I Love New York", artista: "Madonna", duracao: 251},
-    { titulo: "Maneater", artista: "Nelly Furtado", duracao: 258},
-    { titulo: "É de Chocolate", artista: "Xuxa", duracao: 299}
-];
+// let musicas = [
+//     { titulo: "I Love New York", artista: "Madonna", duracao: 251},
+//     { titulo: "Maneater", artista: "Nelly Furtado", duracao: 258},
+//     { titulo: "É de Chocolate", artista: "Xuxa", duracao: 299}
+// ];
 
-for (const musica of musicas) {
-    let mm =
-    let ss =
-    console.log(musica.titulo + " - " + musica.titulo + )
-}
+// for (const musica of musicas) {
+//     let mm = Math.floor(musica.duracao / 60)
+//     let ss = musica.duracao - mm*60
+//     console.log(musica.titulo + " - " + musica.titulo + " (" + mm + ":" + ss + ")")
+// }
+
+// 7.  Crie um array de objetos com nome e nota de 6 alunos. Use for...of para classificar 
+// cada  aluno  (Aprovado,  Recuperação  ou  Reprovado)  e  exibir  o  resultado.  Use 
+// forEach para calcular e exibir separadamente a média dos aprovados e a média 
+// dos reprovados.
+
+let turma = [
+    {nome:'Lucas', nota: 6},
+    {nome:'Maria', nota: 7},
+    {nome:'Luiz', nota: 8.5},
+    {nome:'João', nota: 4.7},
+    {nome:'Tânia', nota: 8},
+    {nome:'Joana', nota: 3.3}
+]
+
+for (const aluno of turma) {
+    console.log('Nome do aluno: ' + aluno.nome + ' Nota do aluno: ' + aluno.nota)
+    if (aluno.nota >= 6) {
+        console.log('Aprovado')
+    }
+    else if (aluno.nota >= 4 && aluno.nota < 6) {
+        console.log('Recuperação')
+    }
+    else {
+        console.log('Reprovado')
+    }
+}  
+
+let somaAprovados = 0
+let contAprovados = 0
+let somaReprovados = 0
+let contReprovados = 0
+
+turma.forEach(({nota}) => {
+     if(nota >= 6){
+        somaAprovados += nota
+        contAprovados++
+     }
+     else if(nota < 4){
+         somaReprovados += nota
+         contReprovados++
+     }
+})
+
+let mediaAprovados = somaAprovados / contAprovados
+let mediaReprovados = somaReprovados / contReprovados
+
+console.log('Média dos alunos aprovados: ' + mediaAprovados.toFixed(2))
+console.log('Média dos alunos reprovados: ' + mediaReprovados.toFixed(2))

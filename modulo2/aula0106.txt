@@ -1,0 +1,11 @@
+INTRODUÇÃO AO DESENVOLVIMENTO WEB - HISTÓRIA, TECNOLOGIAS
+ E O PAPEL DO FRONT END
+
+HISTÓRIA DA INTERNET
+
+- surge no contexto pos 2a guerra mundial
+    guerra fria
+    EUA cria a DARPA para manter backup dos dados caso aconteça algo com os EUA
+
+- como a internet funciona
+

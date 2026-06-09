@@ -1,24 +1,24 @@
 const prompt = require('prompt-sync')()
-const readlineSync = require('readline-sync')
+// const readlineSync = require('readline-sync')
 
 // 1. Crie um objeto representando um produto com as propriedades: nome, preço,
 // categoria e quantidade em estoque. Use for...in para percorrer e exibir todas as
 // propriedades e seus valores. Em seguida, adicione uma nova propriedade
 // desconto ao objeto e exiba o preço final calculado.
 
-// let produto = {
-//     nome: 'farinha',
-//     preco: 4.99,
-//     categoria: 'não perecível',
-//     quantidadeEstoque: 2500,
-//     desconto: 20
-// }
+let produto = {
+    nome: 'farinha',
+    preco: 4.99,
+    categoria: 'não perecível',
+    quantidadeEstoque: 2500,
+    desconto: 20
+}
 
-// for (const chave in produto) {
-//     console.log(chave + ': ' + produto[chave])
-// }
+for (const chave in produto) {
+    console.log(chave + ': ' + produto[chave])
+}
 
-// console.log('preço do produto ' + produto.nome + ' com desconto: ' + (produto.preco - (produto.preco * (produto.desconto / 100)).toFixed(2)))
+console.log('preço do produto ' + produto.nome + ' com desconto: ' + (produto.preco - (produto.preco * (produto.desconto / 100)).toFixed(2)))
 
 // 2. Crie dois objetos representando personagens de um jogo, cada um com as
 // propriedades: nome, vida, ataque e defesa. Use for...in para exibir os atributos de
@@ -230,36 +230,31 @@ const readlineSync = require('readline-sync')
 // buscar  um  contato  pelo nome usando for...of e exiba os dados encontrados ou 
 // uma mensagem de "não encontrado". 
 
-let contatos = [
-    {nome: 'Lucas', telefone: '(11) 1111-1111', email:'lucas@obaoba.com'},
-    {nome: 'João', telefone: '(22) 2222-2222', email:'joao14@hotmail.com'},
-    {nome: 'Jussara', telefone: '(33) 3333-3333', email:'jussaraaaaa@obaoba.com'}
-]
+// let agenda = [
+//     { nome: 'Lucas', telefone: '(11)1111-1111', email: 'lucasbrum@provedor.com' },
+//     { nome: 'Maria', telefone: '(22)2222-2222', email: 'mariaalves@provedor.com' },
+//     { nome: 'Luis', telefone: '(33)3333-3333', email: 'joaocosta@provedor.com'}
+// ]
 
-console.log('// NOME // TELEFONE // E-MAIL //')
-contatos.forEach(({nome, telefone, email}) => {
-    console.log('// ' + nome + ' // ' + telefone + ' // ' + email + ' //')
-})
+// console.log('========== AGENDA ==========')
+// agenda.forEach(({ nome, telefone, email }) => {
+//     console.log('|| NOME: ' + nome + ' || TELEFONE: ' + telefone + ' || E-MAIL: ' + email)
+// })
 
-let nomeProcurado = readlineSync.question('Digite o nome do contato a ser procurado: ')
-let encontrado = false
-let contatoEncontrado = null
+// let contatoProcurado = prompt('Entre com um nome de contato a ser procurado:')
+// let encontrouContato = false
 
-for (const contato in contatos){
-    if(nomeProcurado === contato.nome){
-        contatoEncontrado = contato
-        encontrado = true
-        break
-    }
-}
+// for (contato of agenda) {
+//     if (contatoProcurado.toLowerCase() == contato.nome.toLowerCase()) {
+//         console.log('Nome: ' + contato.nome + ' || Telefone: ' + contato.telefone + ' || E-mail: ' + contato.email)
+//         encontrouContato = true
+//         break
+//     }
+// }
 
-if(encontrado){
-    console.log('Contato encontrado!')
-    console.log('|   ' + contatoEncontrado.nome + '  |  ' + contatoEncontrado.telefone + '  |  ' + contatoEncontrado.email + '  |')
-}
-else{
-    console.log('Contato não encontrado!')
-}
+// if (!encontrouContato) {
+//     console.log('Contato não encontrado!')
+// }
 
 // 10.  Implemente  uma  pilha  usando  um  array  para  simular  o  histórico  de  um 
 // navegador. Crie as funções visitar(pagina) (push), voltar() (pop) e paginaAtual() 

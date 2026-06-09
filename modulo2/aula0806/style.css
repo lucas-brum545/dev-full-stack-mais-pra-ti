@@ -1,0 +1,15 @@
+.caixa{
+    background-color: aquamarine;
+    padding: 30px;
+    margin: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}

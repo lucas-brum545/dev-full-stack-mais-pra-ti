@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <h1>Estudos DOM</h1>
+</head>
+<body>
+    <p>Aprendendo a usar o DOM em Javascript</p>
+    <p>Aqui que vai mudar</p>
+    <p class="msg">Vamos usar outro <strong>seletor</strong></p>
+
+    <label for="nome">Digite seu nome: </label>
+    <input type="text" id="nome" name="nome">
+    <button onclick="mostrarNome()">Mostrar</button>
+    <p id="resultado"></p>
+
+    <p class="frase">Vamos usar querySelector</p>
+
+    <script>
+        let paragrafo = document.getElementsByTagName('p')[1]
+        paragrafo.innerText = "Texto alterado pelo Javascript"
+        paragrafo.style.color = 'blue'
+        let p2 = document.getElementsByClassName("msg")[1]
+
+        p2.innerHTML = "Usamos o seletor <b>CLASS</b> para mudar o texto"
+        
+        function mostrarNome(){
+            // let nome = document.getElementsByName("nome")[0].value
+            const campo = document.querySelector("[name='nome']")
+            let nome = campo.value
+            document.getElementById("resultado").innerText = `Olá, ${nome}!`
+        }
+
+        let texto = document.querySelector('.frase')
+        texto.innerHTML = "Usamos o querySelector pelo <b>TAG</b>"
+
+    </script>
+</body>
+</html>

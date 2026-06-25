@@ -2,3 +2,15 @@ node_modules/
 .vscode/
 *.log
 venv/
+# Ignorar dependências
+vendor/
+# Ignorar arquivos de build
+dist/
+build/
+# Ignorar logs e temporários
+*.tmp
+# Ignorar arquivos do sistema
+DS_Store
+Thumbs.db
+# Ignorar variáveis de ambiente
+env

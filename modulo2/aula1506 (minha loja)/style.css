@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f1f1f1;
+}
+
+.cabecalho{
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.menu{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a{
+    color:#f1f1f1;
+    text-decoration:solid;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+    transform: scale(1.10);
+    color: #1E90FF;
+}
+
+.cartoes{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produtos{
+    background-color: aliceblue;
+    width: 250px;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.produtos h2{
+    font-size: 30px;
+    margin-bottom: 15px;;
+}
+
+.produtos p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.produtos button{
+    padding: 10px;
+    background-color: #222;
+    color:#f1f1f1;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.produtos button:hover{
+    transform: scale(1.10);
+    color: #f1f1f1;
+}
+
+.rodape{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 20px;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 8px;
+}

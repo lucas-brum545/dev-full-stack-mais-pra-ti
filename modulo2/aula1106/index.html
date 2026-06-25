@@ -6,16 +6,81 @@
     <title>Box model</title>
     <style>
         *{
-
+            box-sizing: border-box;
+            background-color: azure;
+            color: black;
         }
         body{
+            margin: 0;
+            padding: 20px;
 
         }
+        img{
+            width: 120px;
+            height: 120px;
+        }
+
+        .demo-section{
+            margin-bottom: 40px;
+        }
+
+        .demo-section h2.content{
+            border: 1px solid pink;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin-left: 100px;
+        }
+
+        .demo-section h2.units{
+            border: 1px solid pink;
+            width: 100vmin;
+            height: 100vmin;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card{
+            border: 1px solid pink;
+            width: 200px;
+            padding: 20px;
+            border-radius: 6px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .product-card .product-name {
+            font-size: 1.1rem;
+            margin: 0 0 8px;
+
+        }
+
+        .product-card .product-price {
+            color: purple;
+            font-weight: bold;
+            margin: 0;
+        }
+
+
+
+
     </style>
 </head>
 <body>
-    <section></section>
-    <h2>Conteúdo</h2>
-    <h2>Unidades de medida</h2>
+    <section class="demo-section">
+    <h2 class="content">Conteúdo</h2>
+
+    <h2 class="units">Unidades de medida</h2>
+    </section>
+    <section>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Madonna_%E2%80%93_Confessions_II_%28album_cover%29.png" alt="">
+            <h3 class="product-name">CD Madonna CONFESSIONS II</h3>
+            <p class="product-price">R$ 89,90</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+    </section>
 </body>
 </html>

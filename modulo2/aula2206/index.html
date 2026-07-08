@@ -22,7 +22,7 @@
         let paragrafo = document.getElementsByTagName('p')[1]
         paragrafo.innerText = "Texto alterado pelo Javascript"
         paragrafo.style.color = 'blue'
-        let p2 = document.getElementsByClassName("msg")[1]
+        let p2 = document.getElementsByClassName("msg")[0]
 
         p2.innerHTML = "Usamos o seletor <b>CLASS</b> para mudar o texto"
         
@@ -34,7 +34,8 @@
         }
 
         let texto = document.querySelector('.frase')
-        texto.innerHTML = "Usamos o querySelector pelo <b>TAG</b>"
+        texto.innerText = "Texto alterado pelo queryselector"
+        texto.innerHTML = "Texto alterado pelo <b>QuerySelector</b>"
 
     </script>
 </body>

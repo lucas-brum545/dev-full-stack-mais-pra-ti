@@ -1,0 +1,17 @@
+INTRODUÇÃO A FRAMEWORKS CSS
+
+bootstrap
+	componentes prontos
+tailwind
+	pequenas peças que montam componentes
+
+framework 
+	- 'caixa de ferramentas'
+	- classes prontas para utilizar
+	html - estrutura, css - aparencia, javascript - comportamento
+	bootstrap no vscode - npm i bootstrap@5.3.8
+
+TESTES DE UNIDADE
+	npm test
+	colocar jest ao lado de test no package.json
+	

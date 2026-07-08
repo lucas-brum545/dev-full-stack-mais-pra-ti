@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+    <div>
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" placeholder="Digite o Cep" value="">
+        <button type="button" onclick="preencher()">Buscar</button>
+    </div>
+
+    <div>
+        <label for="logradouro">Logradouro</label>
+        <input type="text" id="logradouro" disabled>
+    </div>
+
+    <div>
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" disabled>
+    </div>
+
+    <div>
+        <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" disabled>
+        </div>
+        <div>
+            <label for="uf">UF</label>
+            <input type="text" id="uf" disabled>
+        </div>
+    </div>
+
+    <script>
+        
+        const logradouro = document.getElementById("logradouro");
+        const bairro = document.getElementById("bairro");
+        const cidade = document.getElementById("cidade");
+        const uf = document.getElementById("uf");
+        const cepEntrada = document.getElementById("cep");
+
+
+        async function BuscarOCep(cep) {
+            let limpa_cep = cep.replace(/\D/g, "")
+            if (limpa_cep.length !== 8) {
+                throw new Error("Cep deve ter 8 numeros")
+            }
+            let resposta = await fetch(`https://viacep.com.br/ws/${limpa_cep}/json/`);
+            let dados = await resposta.json();
+            if (dados.erro) {
+                throw new Error("Cep nao encontrado")
+            }
+            console.log(dados)
+            return dados
+        }
+
+        async function preencher() {
+            const cep = cepEntrada.value.trim()
+            
+            if (!cep) {
+                alert('Digite um CEP')
+                return
+            }
+
+            try {
+                const dados = await BuscarOCep(cep)
+                
+                logradouro.value = dados.logradouro
+                bairro.value = dados.bairro
+                cidade.value = dados.localidade
+                uf.value = dados.uf
+
+            } catch (erro) {
+                alert(erro.message)
+            }
+        }
+
+        cepEntrada.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault()
+                preencher()
+            }
+        })
+    </script>
+</form>
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+INTRODUÇÃO AO REACT
+ARQUIVOS JSX
+- extensao do JS que permite programar mais proximo ao html
+- npm create vite@latest

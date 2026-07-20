@@ -1,46 +1,39 @@
-
-import {useState, useEffect} from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import Home from '../pages/Home/Home'
-import NewsCard from '../components/NewsCard/NewsCard'
-import Footer from '../components/Footer/Footer'
-import {noticias} from '../data/noticias'
+import Materia from '../pages/Materia/Materia'
+import Cadastro from '../pages/Cadastro/Cadastro'
 import './App.css'
 
 function App() {
-  const [tema,setTema] = useState(() => {
-    return localStorage.getItem('tema') || 'light'
-  })
-  const [manchete, ...demais] = noticias
+  const [ tema, setTema ] = useState(() => {
+    const salvo = localStorage.getItem('tema') || 'light'
+    if(salvo) return salvo
 
-  function alterarTema(){
+    const preferenciaEscuro = window.matchMedia('(preferes-color-scheme: dark)').matches
+    if(preferenciaEscuro) return 'dark'
+
+    return 'light'
+  })
+
+  function alterarTema() {
     setTema(t => (t === 'light' ? 'dark' : 'light'))
   }
-  // configurar para que tema seja a cor do sistema operacional do usuário
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (mediaQuery.matches) {
-      setTema('dark')
-    } else {
-      setTema('light')
-    }
-  }, [])
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', tema)
     localStorage.setItem('tema', tema)
   }, [tema])
 
-
   return (
     <>
-      <Header tema = {tema} aoAlternarTema={alterarTema}/>
-
+      <Header tema={tema} aoAlternarTema={alterarTema} />
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/materia/:id" element={<Materia />} />
+        <Route path="/cadastro" element={<Cadastro />} />
       </Routes>
-      
     </>
   );
 }

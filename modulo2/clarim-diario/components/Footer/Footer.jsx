@@ -1,4 +1,5 @@
 import '../Footer/Footer.css'
+import {Link} from 'react-router-dom'
 
 function Footer(){
     return (
@@ -25,6 +26,7 @@ function Footer(){
           <a href="#">Privacidade</a>
           <a href="#">Quem Somos</a>
           <a href="#">Contato</a>
+          <Link to="/cadastro">Cadastre-se</Link>
         </div>
       </footer>
     );
